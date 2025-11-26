@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no minimum-scale=1.0 maximum-scale=1.0 initial-scale=1.0">
+    <title>AR Restaurante</title>
+
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.5/aframe/build/aframe-ar.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button id="menuBtn">🍽️ Ver Cardápio</button>
+    <button id="scaleBtn">Aumentar Escala</button>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button class="close-btn" id="closeBtn">×</button>
+            <div class="restaurant-logo">🍴</div>
+            <h1 class="restaurant-name">La Bella Vita</h1>
+        </div>
+
+        <div class="menu-content" id="menuContainer"></div>
+        <button class="add-btn" onclick="uploadModelo()">+</button>
+
+    </div>
+
+    <!-- AFRAME -->
+    <a-scene embedded arjs>
+        <a-assets id="assetLoader"></a-assets>
+        <a-assets>
+            <a-asset-item id="tree" src=""></a-asset-item>
+        </a-assets>
+
+        <a-marker preset="hiro">
+            <a-entity id="model" gltf-model="#tree" rotation="-90 -90 0" scale="1 1 1"></a-entity>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+    </a-scene>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

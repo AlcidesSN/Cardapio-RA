@@ -1,0 +1,162 @@
+ body {
+     margin: 0;
+     overflow: hidden;
+     font-family: 'Arial', sans-serif;
+ }
+
+ #scaleBtn,
+ #menuBtn {
+     position: fixed;
+     z-index: 999;
+     padding: 12px 24px;
+     background-color: #ff6b35;
+     color: white;
+     border: none;
+     border-radius: 25px;
+     font-size: 16px;
+     cursor: pointer;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+ }
+
+ #scaleBtn {
+     bottom: 20px;
+     left: 50%;
+     transform: translateX(-50%);
+ }
+
+ #menuBtn {
+     top: 20px;
+     right: 20px;
+ }
+
+ #menuBtn.hidden {
+     opacity: 0;
+     pointer-events: none;
+ }
+
+ .sidebar {
+     position: fixed;
+     top: 0;
+     right: -320px;
+     width: 320px;
+     height: 100%;
+     background: #fff;
+     overflow-y: auto;
+     padding: 0;
+     box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
+     z-index: 999;
+     transition: right 0.3s;
+ }
+
+ .sidebar.open {
+     right: 0;
+ }
+
+ .sidebar-header {
+     background: linear-gradient(135deg, #ff6b35, #ff8555);
+     color: white;
+     text-align: center;
+     padding: 30px 20px;
+ }
+
+ .restaurant-logo {
+     width: 80px;
+     height: 80px;
+     background: white;
+     border-radius: 50%;
+     margin: 0 auto 15px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 36px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+
+ .menu-content {
+     padding: 20px;
+ }
+
+ .menu-section {
+     margin-bottom: 30px;
+ }
+
+ .section-title {
+     font-size: 20px;
+     font-weight: bold;
+     color: #ff6b35;
+     margin-bottom: 15px;
+     padding-bottom: 8px;
+     border-bottom: 2px solid #ff6b35;
+ }
+
+ .menu-item {
+     padding: 12px;
+     margin-bottom: 15px;
+     background: white;
+     border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+ .item-header {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 5px;
+ }
+
+ .item-name {
+     font-weight: bold;
+ }
+
+ .item-description {
+     font-size: 13px;
+     color: #666;
+ }
+
+ .item-price {
+     color: #ff6b35;
+     font-size: 16px;
+     font-weight: bold;
+ }
+
+ .view-btn {
+     width: 32px;
+     height: 32px;
+     border-radius: 50%;
+     background: #ff6b35;
+     color: white;
+     border: none;
+     cursor: pointer;
+ }
+
+ .close-btn {
+     position: absolute;
+     top: 15px;
+     right: 15px;
+     width: 35px;
+     height: 35px;
+     font-size: 24px;
+     background: rgba(255, 255, 255, 0.3);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: none;
+     border-radius: 50%;
+     color: white;
+     cursor: pointer;
+ }
+ .add-btn{
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+        font-size: 24px;
+        background: rgba(255, 255, 255, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+ }
