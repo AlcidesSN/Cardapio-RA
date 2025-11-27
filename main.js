@@ -29,7 +29,36 @@ const menuItems = [
         preco: 0,
         descricao: "Morto vivo muito poderoso.",
         modelo3D: "./modelos/Dark_Lich_Monarch_1001225807_texture.glb"
-    }
+    },
+    {
+        categoria: "Entradas",
+        nome: "Mini Sanduíches",
+        preco: 0,
+        descricao: "Mini sanduíches variados.",
+        modelo3D: "./modelos/plate_with_small_sandwitches.glb"
+    },
+    {
+        categoria: "Pratos Principais",
+        nome: "PF de Bacon",
+        preco: 0,
+        descricao: "Prato feito com bacon.",
+        modelo3D: "./modelos/pratofeitobacon.glb"
+    },
+    {
+        categoria: "Sobremesas",
+        nome: "Brownies com sorvete",
+        preco: 0,
+        descricao: "3 Brownie e uma bola de sorvete de creme.",
+        modelo3D: "./modelos/plate_of_brownies.glb"
+    },
+        {
+        categoria: "Sobremesas",
+        nome: "Pudim",
+        preco: 0,
+        descricao: "Pudim de leite.",
+        modelo3D: "./modelos/typical_brazilian_glass_plate_free.glb"
+    },
+
 ];
 
 
