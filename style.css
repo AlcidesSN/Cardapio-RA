@@ -4,7 +4,6 @@
      font-family: 'Arial', sans-serif;
  }
 
- #scaleBtn,
  #menuBtn {
      position: fixed;
      z-index: 999;
@@ -17,13 +16,6 @@
      cursor: pointer;
      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
  }
-
- #scaleBtn {
-     bottom: 20px;
-     left: 50%;
-     transform: translateX(-50%);
- }
-
  #menuBtn {
      top: 20px;
      right: 20px;
@@ -160,3 +152,35 @@
         color: white;
         cursor: pointer;
  }
+
+ #rodarEsq, #rodarDir, #rodarCima, #rodarBaixo {
+    position: fixed;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    background: #ff6b35;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    bottom: 100px;
+    font-size: 20px;
+}
+
+#rodarEsq { left: 20px; }
+#rodarDir { left: 90px; }
+#rodarCima { left: 55px; bottom: 160px; }
+#rodarBaixo { left: 55px; bottom: 40px; }
+
+#scaleMais, #scaleMenos {
+    position: fixed;
+    z-index: 999;
+    padding: 10px 20px;
+    background: #ff6b35;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    right: 20px;
+}
+
+#scaleMais { bottom: 140px; }
+#scaleMenos { bottom: 80px; }

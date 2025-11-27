@@ -155,15 +155,58 @@ function uploadModelo() {
 const menuBtn = document.getElementById('menuBtn');
 const closeBtn = document.getElementById('closeBtn');
 const sidebar = document.getElementById('sidebar');
-const scaleBtn = document.getElementById('scaleBtn');
+const btnEsq = document.getElementById("rodarEsq");
+const btnDir = document.getElementById("rodarDir");
+const btnCima = document.getElementById("rodarCima");
+const btnBaixo = document.getElementById("rodarBaixo");
+const btnMais = document.getElementById("scaleMais");
+const btnMenos = document.getElementById("scaleMenos");
 
-let currentScale = 1;
+function getModel() {
+    return document.getElementById("model");
+}
+
+btnEsq.onclick = () => {
+    const m = getModel();
+    let r = m.getAttribute("rotation");
+    r.y -= 10;
+    m.setAttribute("rotation", `${r.x} ${r.y} ${r.z}`);
+};
+
+btnDir.onclick = () => {
+    const m = getModel();
+    let r = m.getAttribute("rotation");
+    r.y += 10;
+    m.setAttribute("rotation", `${r.x} ${r.y} ${r.z}`);
+};
+
+btnCima.onclick = () => {
+    const m = getModel();
+    let r = m.getAttribute("rotation");
+    r.x -= 10;
+    m.setAttribute("rotation", `${r.x} ${r.y} ${r.z}`);
+};
+
+btnBaixo.onclick = () => {
+    const m = getModel();
+    let r = m.getAttribute("rotation");
+    r.x += 10;
+    m.setAttribute("rotation", `${r.x} ${r.y} ${r.z}`);
+};
+
+let scale = 1;
+
+btnMais.onclick = () => {
+    const m = getModel();
+    scale += 0.1;
+    m.setAttribute("scale", `${scale} ${scale} ${scale}`);
+};
+
+btnMenos.onclick = () => {
+    const m = getModel();
+    if (scale > 0.1) scale -= 0.1;
+    m.setAttribute("scale", `${scale} ${scale} ${scale}`);
+};
 
 menuBtn.onclick = () => { sidebar.classList.add('open'); menuBtn.classList.add('hidden'); };
 closeBtn.onclick = () => { sidebar.classList.remove('open'); menuBtn.classList.remove('hidden'); };
-
-scaleBtn.onclick = () => {
-    currentScale += 0.5;
-    if (currentScale > 5) currentScale = 1;
-    model.setAttribute('scale', `${currentScale} ${currentScale} ${currentScale}`);
-};
